@@ -1,0 +1,8 @@
+{
+  "name": "Remix AgriCare — AI Crop Health \u0026 Farmer Platform",
+  "description": "Multilingual AI agricultural platform for Indian farmers: crop disease detection, 30-question smart assessment, affordable care kits, knowledge library, and agricultural marketplace in English, Marathi, and Hindi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

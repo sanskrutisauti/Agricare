@@ -1,0 +1,984 @@
+PROJECT: AGRICARE — AI-POWERED CROP HEALTH AND FARMER ASSISTANCE PLATFORM
+
+Act as an expert full-stack web developer, AI engineer, UI/UX designer, agricultural technology specialist, and product designer. Build a beautiful, modern, responsive, and functional website named AgriCare that helps farmers identify crop diseases, understand their causes, receive affordable treatment recommendations, purchase agricultural products, and manage their farming activities.
+
+This is a second-year engineering college community engagement project designed to support farmers, especially small and financially constrained farmers in India.
+
+The website must be practical for real farmers, easy to understand, mobile-friendly, accessible to users with limited technical knowledge, and available in three languages: English, Marathi, and Hindi.
+
+Do not create only a static landing page or a simple UI mockup. Build a complete, interactive website with working navigation, functional forms, realistic data, AI integration where possible, and clear feedback for user actions.
+
+If any external API, database, payment gateway, or live data source requires credentials, create a properly structured integration and a clearly labelled demonstration mode instead of pretending that live functionality is working.
+
+---
+
+1. BRAND IDENTITY AND DESIGN
+
+Website name: AgriCare
+
+Suggested tagline: "Healthy Crops, Happy Farmers."
+
+Alternative tagline: "Smart Farming. Affordable Care. Better Harvests."
+
+Target users:
+
+- Small and medium-scale farmers in India.
+- Farmers who may not understand English.
+- Farmers who need low-cost crop disease solutions.
+- Farmers who use smartphones with limited internet connectivity.
+
+Design requirements:
+
+- Use a clean, modern, trustworthy agricultural design.
+- Use natural shades of green, white, earthy brown, and subtle yellow.
+- Include attractive agricultural imagery, healthy crops, farmers working in fields, leaves, vegetables, and farming landscapes.
+- Use clear typography, large buttons, readable text, rounded cards, subtle shadows, and accessible contrast.
+- Use simple icons with clear labels.
+- Make the interface friendly, professional, and visually impressive enough for a college project demonstration.
+- Avoid clutter, excessive animations, tiny text, and complicated navigation.
+- Use real agricultural product photographs and relevant crop images wherever possible.
+- Ensure the website works smoothly on mobile phones, tablets, laptops, and desktop computers.
+- Include loading indicators, empty states, error messages, and success notifications.
+- Provide a low-bandwidth-friendly experience, compressed images, and graceful handling of slow or failed network requests.
+
+Create a consistent header, footer, button style, card design, and language system across the entire website.
+
+---
+
+2. HEADER AND GLOBAL NAVIGATION
+
+Create a responsive navigation bar containing:
+
+- AgriCare logo and website name.
+- Home.
+- Disease Detection.
+- Crop Assessment.
+- Marketplace.
+- Crop Library.
+- AI Chatbot.
+- Farmer Dashboard.
+- View Cart icon with a live item count.
+- Language selector: English | मराठी | हिन्दी.
+- Login/Register or farmer profile option.
+
+On mobile devices, use an accessible hamburger menu.
+
+The active section should be highlighted. Navigation should work correctly, with smooth scrolling or proper page routing.
+
+Keep the language selector and cart accessible throughout the website.
+
+Add a footer containing:
+
+- About AgriCare.
+- Our mission.
+- Contact and feedback.
+- Frequently asked questions.
+- Privacy policy.
+- Disclaimer about AI-generated agricultural guidance.
+- Project information identifying this as a student community engagement initiative.
+
+---
+
+SECTION 1: HOME — WELCOME TO AGRICARE
+
+Create an attractive home page that immediately explains how AgriCare helps farmers.
+
+Hero section:
+
+- Main heading: "Your Smart Farming Companion."
+- Supporting text: "Detect crop diseases, discover affordable treatments, and protect your harvest with AI-powered agricultural assistance."
+- Primary CTA: "Detect Crop Disease."
+- Secondary CTA: "Explore Crop Library."
+- Additional CTA: "Build My Affordable Care Kit."
+
+Use a high-quality hero image showing an Indian farmer in a healthy agricultural field.
+
+Include the following feature cards:
+
+1. AI Crop Disease Detection — Upload a crop image and receive an AI-assisted analysis.
+2. Affordable Care Kits — Get treatment recommendations suited to your crop and budget.
+3. Smart Crop Assessment — Answer 30 questions for personalised farming guidance.
+4. Agricultural Marketplace — Explore fertilisers and other relevant agricultural products.
+5. Crop Knowledge Library — Learn about crops, common diseases, prevention, and care.
+6. Multilingual AI Assistant — Ask farming questions in English, Marathi, or Hindi.
+7. Farmer Dashboard — Track scans, care tasks, orders, and saved kits.
+
+Add a "How AgriCare Works" section with four simple steps:
+
+Step 1: Select your crop or upload a crop image.
+
+Step 2: Understand the possible disease and its symptoms.
+
+Step 3: Complete the assessment and receive a personalised, affordable care plan.
+
+Step 4: Follow care recommendations and track progress from your dashboard.
+
+Include a "Why Choose AgriCare?" section highlighting:
+
+- Affordable solutions for small farmers.
+- Easy-to-understand information.
+- Three-language accessibility.
+- Preventive crop care.
+- Personalised recommendations.
+- Responsible AI-assisted disease analysis.
+
+Add featured crops such as tomato, rice, onion, and cotton.
+
+Include a clear call to action encouraging farmers to begin their first crop scan.
+
+---
+
+SECTION 2: AI CROP DISEASE DETECTION
+
+This is one of the most important features of the website.
+
+Build a fully interactive image-upload and AI-analysis interface.
+
+A. Crop image upload
+
+Provide a large drag-and-drop upload area with a browse button.
+
+Allow supported image formats such as JPG, JPEG, PNG, and WEBP.
+
+Display a preview of the uploaded image before analysis.
+
+Provide buttons to:
+
+- Upload an image.
+- Remove or replace an image.
+- Select the crop type.
+- Choose the plant part being photographed, such as leaf, stem, fruit, root, or whole plant.
+- Start analysis.
+- Clear the form.
+
+Allow farmers to select a crop from the supported crop list or select "Identify crop automatically."
+
+B. STRICT IMAGE VALIDATION
+
+The system must accept only relevant crop or plant images for disease analysis.
+
+Before displaying a disease diagnosis, perform validation checks to determine whether the uploaded image appears to contain a plant, crop, leaf, stem, fruit, or other relevant plant part.
+
+Reject unrelated images, including selfies, people, documents, vehicles, landscapes without a clearly identifiable plant, and unrelated objects.
+
+If the uploaded image is irrelevant, display a friendly message:
+
+"Please upload a clear photo of a crop, leaf, stem, fruit, or other plant part so that AgriCare can analyse it."
+
+In Marathi:
+"कृपया पिकाच्या पानाचा, खोडाचा, फळाचा किंवा इतर वनस्पतीच्या भागाचा स्पष्ट फोटो अपलोड करा."
+
+In Hindi:
+"कृपया फसल, पत्ती, तने, फल या पौधे के किसी भाग की स्पष्ट तस्वीर अपलोड करें।"
+
+If the farmer selects a crop type, check whether the image is consistent with the selected crop before generating a diagnosis.
+
+If the image does not match the selected crop, explain the mismatch and ask the farmer to upload another image or correct the crop selection.
+
+Do not issue a confident diagnosis when the image is blurry, too dark, too distant, obstructed, or otherwise unsuitable. Ask for a clearer photograph.
+
+Use a real vision-capable AI model or image-classification service for image analysis. Do not simulate image understanding using filename checks, hardcoded predictions, or random disease results.
+
+C. AI DISEASE ANALYSIS
+
+Once the image passes validation, analyse it using a suitable vision model.
+
+The analysis should consider:
+
+- Selected or identified crop.
+- Visible symptoms.
+- Leaf colour and patterns.
+- Spots, lesions, holes, curling, wilting, or discolouration.
+- Visible fungal-like growth or pest damage.
+- Possible nutrient deficiency symptoms.
+- Possible environmental stress.
+- Image quality and diagnostic limitations.
+
+Display the following results in a clean, organised diagnosis card:
+
+1. Crop name.
+2. Most likely disease or crop health problem.
+3. Scientific name, if known and supported by the available evidence.
+4. Visible symptoms identified in the image.
+5. Possible causes of the problem.
+6. How the disease or condition develops and spreads.
+7. Conditions that may favour the problem.
+8. Severity estimate: Low, Moderate, High, or Unable to determine.
+9. Confidence score or calibrated confidence level.
+10. Other possible diagnoses.
+11. Recommended next steps.
+12. Preventive measures.
+13. Estimated treatment cost range in Indian rupees, when reliable local data is available.
+14. When to seek advice from an agricultural expert.
+
+Clearly distinguish a model's confidence from the probability that a diagnosis is medically or scientifically correct. Never invent a numerical accuracy score or imply that a prediction is confirmed simply because the model sounds confident.
+
+If reliable confidence calibration is unavailable, display a qualitative confidence level and explain the limitation.
+
+D. TREATMENT RECOMMENDATIONS
+
+For each suspected disease, provide:
+
+- Immediate steps the farmer can take.
+- Affordable cultural and preventive practices.
+- Suitable sanitation and crop-management practices.
+- Relevant biological or integrated pest management options.
+- Fertiliser or nutrient corrections only when supported by the symptoms and relevant information.
+- Suitable registered agricultural products, if a chemical treatment is genuinely indicated.
+- Application precautions and label-following instructions.
+- Advice about protective equipment, pre-harvest intervals, and safe handling when relevant.
+
+Never recommend a pesticide, fungicide, or chemical treatment solely on the basis of an uncertain image prediction.
+
+Prefer cost-effective, locally appropriate, integrated pest management approaches. Do not assume every crop problem needs a chemical spray.
+
+E. SECOND OPINION AND FOLLOW-UP
+
+Include:
+
+- "Upload Another Image."
+- "Save to My Dashboard."
+- "Add Recommended Product to Cart."
+- "Generate Affordable Care Plan."
+- "Ask AI Assistant About This Result."
+
+Allow the farmer to view previous scans from the dashboard.
+
+Provide a clear disclaimer: AI analysis is an initial assessment, not a guaranteed diagnosis. Encourage expert confirmation when the crop is severely affected or the diagnosis is uncertain.
+
+---
+
+SECTION 3: CROP ASSESSMENT AND PERSONALised CARE KIT
+
+Build an interactive agricultural assessment consisting of exactly 30 questions.
+
+The assessment should collect enough information to create a personalised, practical, and affordable crop-care plan.
+
+Organise the 30 questions into logical categories:
+
+Category A: Farmer and farm details — 4 questions
+
+1. Which state and district is your farm located in?
+2. What is the size of your cultivated land?
+3. Which type of farming do you primarily practise?
+4. What is your preferred language?
+
+Category B: Crop details — 5 questions
+
+5. Which crop are you growing?
+6. Which variety of the crop are you growing, if known?
+7. At what growth stage is your crop?
+8. When did you sow or transplant the crop?
+9. What is the approximate area cultivated with this crop?
+
+Category C: Soil and irrigation — 5 questions
+
+10. What type of soil is present in your field?
+11. Do you know the soil pH or have a soil-test report?
+12. Which irrigation method do you use?
+13. How frequently do you irrigate?
+14. Have you noticed waterlogging, unusually dry soil, or drainage problems?
+
+Category D: Crop symptoms and disease history — 6 questions
+
+15. Have you noticed any unusual symptoms in the crop?
+16. Which symptoms are visible?
+17. Which part of the plant is affected?
+18. What percentage of the crop appears affected?
+19. When did the symptoms first appear?
+20. Have you observed similar problems in previous seasons?
+
+Category E: Crop management — 4 questions
+
+21. Which fertilisers have you used recently?
+22. Have you used any pesticides, fungicides, or biological treatments recently?
+23. Have you noticed insects, weeds, or other pest-related problems?
+24. What crop rotation or previous crop did you use?
+
+Category F: Budget and treatment preferences — 4 questions
+
+25. What is your approximate budget for crop treatment per acre?
+26. Would you prefer biological, conventional, or integrated pest management options?
+27. Which agricultural products or treatments are already available to you?
+28. Would you prefer the lowest-cost effective option, a balanced option, or a longer-term preventive approach?
+
+Category G: Additional information — 2 questions
+
+29. Would you like to upload a soil-test report or additional crop photographs?
+30. Is there any other information about your crop or field that you would like to share?
+
+IMPORTANT: These are 30 questions in total. Do not add or remove questions from the assessment.
+
+Assessment interface:
+
+- Show a progress bar, such as "Question 8 of 30."
+- Display one question at a time or a small, manageable group of questions.
+- Use simple language and large buttons.
+- Provide multiple-choice answers wherever appropriate.
+- Allow "I don't know" and "Not applicable" where suitable.
+- Allow farmers to go back and change answers.
+- Save progress locally or to the farmer's account when supported.
+- Translate every question and answer into English, Marathi, and Hindi.
+- Make questions relevant to the selected crop.
+- Mark required and optional questions clearly.
+- Validate responses and provide a clear completion message.
+
+A. PERSONALised KIT GENERATION
+
+After completion, analyse the answers and generate a tailored crop-care plan.
+
+The kit should contain only products or practices relevant to the crop, growth stage, symptoms, soil, irrigation, and stated budget.
+
+Include:
+
+- Selected crop and growth stage.
+- Summary of the farmer's responses.
+- Main crop health concerns.
+- Recommended immediate actions.
+- Preventive agricultural practices.
+- Affordable biological or non-chemical options where appropriate.
+- Fertilisers only when there is a justified nutrient need.
+- Relevant crop-protection products only when appropriate.
+- Product quantities calculated for the selected area when reliable application guidance is available.
+- Estimated total cost in Indian rupees.
+- Estimated cost per acre.
+- A simple application and monitoring schedule.
+- Safety precautions.
+- Expected benefits and limitations.
+- Reasons for including or excluding each recommended item.
+
+B. LOW-COST AND EFFECTIVE CARE
+
+Affordability is a core objective.
+
+Offer three care-plan options when enough reliable information is available:
+
+1. Budget-Friendly Kit — prioritise essential, effective, low-cost measures.
+2. Balanced Care Kit — combine practical prevention and necessary treatments.
+3. Preventive Care Kit — emphasise longer-term crop health and prevention.
+
+Do not automatically recommend the most expensive products.
+
+Compare options based on suitability, evidence, expected usefulness, total cost, and safety rather than marketing claims.
+
+Do not promise that a kit will cure a disease or guarantee a yield increase.
+
+Allow the farmer to:
+
+- Save the generated kit.
+- Rename the kit.
+- Edit the kit.
+- Compare the three options.
+- View individual product prices.
+- Add available products to the cart.
+- Print or download the care plan.
+- View saved kits on the dashboard.
+
+The assessment should generate recommendations based on actual answers and transparent agricultural rules or a suitable AI model. Do not generate a random kit or use the same recommendations for every farmer.
+
+---
+
+SECTION 4: AGRICULTURAL MARKETPLACE
+
+Build a functional marketplace for agricultural products.
+
+The marketplace should initially focus on relevant fertilisers and crop-care products.
+
+Product categories:
+
+- Organic fertilisers.
+- Compost and vermicompost.
+- Biofertilisers.
+- Micronutrient products.
+- Soil conditioners.
+- Crop-specific nutrient products.
+- Other verified agricultural products where appropriate.
+
+Each product card must contain:
+
+- Actual product image.
+- Product name.
+- Brand and manufacturer, where verified.
+- Product category.
+- Pack size.
+- Current price in Indian rupees.
+- Price per kilogram or litre where meaningful.
+- Availability status.
+- Seller information.
+- Product description.
+- Suitable crops.
+- Intended use.
+- Verified usage instructions and precautions.
+- Product details button.
+- Add to Cart button.
+
+Do not use unrelated stock images or the same generic image for every product. Use product-specific photographs from reliable sources, official product catalogues, or a properly integrated product-data service. If a genuine product image cannot be obtained, clearly identify the placeholder instead of presenting it as an authentic product photograph.
+
+A. REAL-TIME DATA REQUIREMENTS
+
+Integrate a legitimate product catalogue, authorised seller feed, or marketplace API where available.
+
+Retrieve current product information, prices, and stock availability from the configured source.
+
+Include:
+
+- Last updated timestamp.
+- Product availability.
+- Clear handling of unavailable or stale data.
+- API loading and error states.
+- Product search and filters.
+- Sorting by price, category, and relevance.
+
+Do not invent real-time prices, stock levels, discounts, seller details, or product reviews.
+
+If no live API is connected, use clearly labelled demonstration data and explain that prices and availability are illustrative rather than live.
+
+Use INR (₹) throughout.
+
+B. SEARCH AND FILTERS
+
+Allow users to:
+
+- Search by product name.
+- Filter by crop suitability.
+- Filter by product category.
+- Filter by price range.
+- Sort by price from low to high or high to low.
+- View product details.
+- Add or remove products from the cart.
+- Change quantities.
+- See the subtotal and estimated total.
+- Continue shopping.
+- Proceed to checkout.
+
+C. RESPONSIBLE PRODUCT RECOMMENDATIONS
+
+Connect marketplace recommendations to the disease detector and assessment results.
+
+Show only products relevant to the crop and its identified needs. Avoid suggesting fertilisers as treatments for every disease.
+
+Prioritise affordability, product authenticity, local suitability, and safe usage.
+
+Clearly distinguish informational recommendations from verified purchases and professional agricultural advice.
+
+D. VIEW CART AND CHECKOUT
+
+Create a dedicated cart page or drawer accessible throughout the website.
+
+Include:
+
+- Product image and name.
+- Pack size.
+- Unit price.
+- Quantity selector.
+- Remove item option.
+- Subtotal.
+- Delivery charges, if available.
+- Total estimated amount.
+- Empty-cart message.
+- Continue shopping button.
+- Proceed to checkout button.
+
+At checkout, collect only necessary information, such as delivery address and contact details, with appropriate consent and validation.
+
+For this student project, use a demonstration checkout unless a genuine payment provider is configured. Never collect or store card details directly.
+
+Show a clear order confirmation and order ID for demonstration orders. Clearly identify simulated transactions as demo orders.
+
+---
+
+SECTION 5: CROP LIBRARY AND AGRICULTURAL KNOWLEDGE HUB
+
+Create a searchable crop library that gives farmers reliable, easy-to-understand information about common crops.
+
+The initial featured crops must include:
+
+1. Tomato.
+2. Rice.
+3. Onion.
+4. Cotton.
+
+Structure the library so that additional crops can be added easily in the future.
+
+Each crop should have a dedicated information page with:
+
+A. BASIC CROP INFORMATION
+
+- Common name.
+- Scientific name.
+- Crop type.
+- Suitable climate.
+- General temperature requirements.
+- Soil preferences.
+- Soil pH range where supported by reliable references.
+- Sowing or transplanting information.
+- Approximate growth duration, where relevant.
+- Irrigation requirements.
+- Nutrient requirements.
+- Harvesting information.
+- General preventive practices.
+
+B. DISEASE AND PEST INFORMATION
+
+For each crop, list several important diseases, pests, and common non-infectious problems that may occur.
+
+For every problem, provide:
+
+- Common name.
+- Scientific name when established.
+- Actual or representative symptom photographs.
+- Causes.
+- Visible symptoms.
+- Conditions that favour its development.
+- How it spreads, when applicable.
+- How to distinguish it from similar problems.
+- Prevention and cultural management.
+- Biological control options where appropriate.
+- Suitable treatment approaches based on reliable agricultural guidance.
+- Safety precautions.
+- When expert assistance is needed.
+
+Include relevant examples such as:
+
+- Tomato: early blight, late blight, bacterial wilt, leaf curl disease, and nutrient-related disorders.
+- Rice: blast, bacterial leaf blight, sheath blight, and brown spot.
+- Onion: purple blotch, downy mildew, basal rot, and thrips damage.
+- Cotton: bacterial blight, wilt-related problems, sucking pests, and bollworm damage.
+
+Present these as educational examples, not a claim that every symptom can be diagnosed from a photograph alone.
+
+C. KNOWLEDGE HUB FEATURES
+
+Include:
+
+- Search by crop name.
+- Search by disease or pest.
+- Filter by crop category.
+- Filter by disease type.
+- Symptom comparison.
+- Frequently asked questions.
+- Prevention tips.
+- Seasonal farming guidance.
+- Related articles.
+- Links to trusted agricultural institutions and official extension resources.
+
+Use credible references such as ICAR, agricultural universities, KVKs, and relevant government agricultural resources.
+
+Where practical, show the reference source and the last-reviewed date for agricultural information.
+
+All crop pages must support English, Marathi, and Hindi.
+
+Use readable language and practical examples that farmers can understand.
+
+---
+
+SECTION 6: MULTILINGUAL AI CHATBOT — AGRICARE SAHAYAK
+
+Build an interactive AI agricultural assistant named "AgriCare Sahayak."
+
+The chatbot should be accessible as a dedicated section and through a floating chat button across the website.
+
+Supported languages:
+
+- English.
+- Marathi.
+- Hindi.
+
+A. LANGUAGE BEHAVIOUR
+
+Allow farmers to select their preferred language manually.
+
+The chatbot should also recognise the language of a farmer's message when possible and respond in that language.
+
+Translate its welcome message, suggested prompts, buttons, error messages, and responses.
+
+Example welcome message:
+
+English: "Namaste! I am AgriCare Sahayak. Ask me anything about your crops, diseases, soil, irrigation, or affordable crop care."
+
+Marathi: "नमस्कार! मी AgriCare सहाय्यक आहे. तुमच्या पिकांचे रोग, माती, सिंचन आणि कमी खर्चातील पीक व्यवस्थापन याबद्दल मला विचारा."
+
+Hindi: "नमस्ते! मैं AgriCare सहायक हूँ। अपनी फसलों, रोगों, मिट्टी, सिंचाई और कम खर्च में फसल की देखभाल के बारे में मुझसे पूछें।"
+
+B. CHATBOT CAPABILITIES
+
+The assistant should help farmers with:
+
+- Crop disease symptoms.
+- Disease prevention.
+- Crop-specific agricultural practices.
+- Soil health.
+- Irrigation management.
+- Nutrient deficiency questions.
+- Fertiliser information.
+- Pest management.
+- Affordable crop-care options.
+- Crop library information.
+- Questions about assessment results.
+- Questions about saved care kits.
+- Marketplace product details.
+- General farming FAQs.
+
+Allow farmers to type questions and, if supported, upload a crop image or refer to a previously saved disease scan.
+
+The chatbot should use the crop library and trusted agricultural information as its knowledge base where practical.
+
+It should provide concise, clear, actionable answers and ask follow-up questions when essential information is missing.
+
+C. RESPONSIBLE AI RULES
+
+The chatbot must:
+
+- Avoid fabricated agricultural facts.
+- Distinguish confirmed information from possibilities.
+- Avoid unsupported disease diagnoses.
+- Never invent current prices or product availability.
+- Never claim that a treatment is guaranteed to work.
+- Avoid unsafe chemical mixing or unverified pesticide dosage advice.
+- Recommend qualified agricultural assistance when a serious or uncertain issue requires it.
+- Explain technical terms in simple language.
+- Avoid claiming to replace agricultural experts.
+
+Implement the chatbot using a real LLM API where credentials are available. If not configured, provide a clearly labelled demo mode rather than pretending that a live AI conversation is functioning.
+
+---
+
+SECTION 7: FARMER DASHBOARD
+
+Create a personalised dashboard that helps each farmer track crop health and farming activities.
+
+The dashboard should be accessible after login, with a clearly labelled guest/demo option for project evaluation.
+
+A. DASHBOARD SUMMARY CARDS
+
+Display:
+
+1. Total Scans Done.
+2. Pending Care Tasks.
+3. Orders Dispatched.
+4. Saved Custom Kits.
+
+Use actual application data rather than hardcoded values whenever the backend is configured.
+
+In demonstration mode, use clearly labelled sample data.
+
+B. DISEASE SCAN HISTORY
+
+Show previous scans with:
+
+- Scan date and time.
+- Crop name.
+- Uploaded image thumbnail.
+- Identified or suspected disease.
+- Confidence level.
+- Analysis status.
+- Recommended next action.
+- View details button.
+
+Allow farmers to open a previous result and view its treatment recommendations.
+
+C. PENDING CARE TASKS
+
+Create a task management area containing:
+
+- Task title.
+- Related crop.
+- Due date.
+- Priority.
+- Completion status.
+- Mark as completed button.
+
+Example tasks:
+
+- Inspect affected tomato leaves.
+- Check soil moisture.
+- Follow up on a crop-health observation.
+- Review a recommended preventive practice.
+
+Only create treatment reminders when the schedule is supported by reliable guidance. Do not automatically prescribe repeated chemical applications.
+
+D. ORDER TRACKING
+
+Show:
+
+- Order ID.
+- Products purchased.
+- Order date.
+- Total amount.
+- Payment or demo-payment status.
+- Dispatch status.
+- Delivery status, where available.
+
+Use actual order information when connected to a backend. Otherwise label all sample orders as demonstrations.
+
+E. SAVED CUSTOM KITS
+
+Allow farmers to:
+
+- View saved care kits.
+- See recommended products and estimated costs.
+- Rename or edit kits.
+- Compare kits.
+- Add kit items to the cart.
+- Delete saved kits after confirmation.
+- View the associated crop and assessment.
+
+F. FARMER PROFILE
+
+Include:
+
+- Farmer's preferred name or profile name.
+- Preferred language.
+- State and district.
+- Farm size.
+- Primary crops.
+- Basic profile settings.
+
+Collect only information needed for the application. Obtain consent before storing personal information and allow users to edit or delete their saved information.
+
+G. DASHBOARD VISUALISATIONS
+
+Use simple charts where meaningful, such as:
+
+- Scans over time.
+- Crop-wise scan distribution.
+- Completed versus pending tasks.
+- Spending on agricultural products.
+
+Ensure charts remain readable on mobile devices.
+
+---
+
+8. COMPLETE MULTILINGUAL SUPPORT ACROSS THE WEBSITE
+
+Multilingual support is a global requirement, not just a chatbot feature.
+
+Every page and every user interaction must support:
+
+English.
+Marathi (मराठी).
+Hindi (हिन्दी).
+
+Translate all:
+
+- Navigation items.
+- Section headings.
+- Buttons.
+- Form labels.
+- Assessment questions and answers.
+- Image upload instructions.
+- Disease analysis results.
+- Validation errors.
+- Notifications.
+- Marketplace categories.
+- Product descriptions where translations are available.
+- Cart and checkout.
+- Crop library.
+- Chatbot.
+- Dashboard.
+- Empty states.
+- Loading and error messages.
+- Footer.
+- Safety instructions and disclaimers.
+
+Implement a central internationalisation system with translation dictionaries rather than scattering hardcoded strings throughout components.
+
+The language selection must update the entire interface consistently.
+
+Persist the selected language across pages and sessions where appropriate.
+
+Use Unicode-compatible fonts and proper rendering for Devanagari text.
+
+Use simple, natural Marathi and Hindi suitable for farmers. Avoid overly technical translations.
+
+For agricultural terms, prefer clear explanations and retain the scientific name where useful.
+
+If AI-generated content is translated dynamically, preserve the original meaning and safety instructions. Clearly handle any unavailable translation.
+
+---
+
+9. GLOBAL FUNCTIONAL REQUIREMENTS
+
+A. AUTHENTICATION AND DATA
+
+Where supported, provide:
+
+- Farmer registration.
+- Login and logout.
+- Guest/demo access.
+- User-specific scan history.
+- User-specific assessments.
+- Saved kits.
+- Cart persistence.
+- Order history.
+- Dashboard data.
+
+Use a secure backend and database when available. A service such as Firebase or Supabase may be used if properly configured.
+
+Never expose secret API keys in frontend code. Use secure server-side endpoints for privileged API calls.
+
+Do not invent a backend connection or claim data is permanently saved if the application is using local demo storage.
+
+B. REAL AI INTEGRATION
+
+Integrate a suitable vision model for crop image validation and disease analysis, and an LLM for agricultural questions and care-plan generation.
+
+Keep API calls separate from UI components.
+
+Validate uploaded files, restrict file sizes, handle API errors, and avoid sending unnecessary personal information to external AI services.
+
+Use server-side validation and structured responses.
+
+C. RELIABILITY
+
+Include:
+
+- Input validation.
+- Error handling.
+- Loading states.
+- Retry options.
+- Clear success messages.
+- Accessible labels.
+- Keyboard-friendly navigation.
+- Responsive layouts.
+- Empty states.
+- Basic automated tests for important workflows.
+
+Do not fabricate successful AI analysis, payment processing, product availability, order dispatch, or saved records.
+
+D. PERFORMANCE AND ACCESSIBILITY
+
+- Optimise for mobile-first use.
+- Use responsive image sizes.
+- Lazy-load non-critical images.
+- Maintain readable font sizes.
+- Provide descriptive alt text.
+- Support keyboard navigation.
+- Ensure buttons have clear accessible names.
+- Avoid relying only on colour to communicate status.
+- Provide useful feedback for slow connections.
+
+---
+
+10. RECOMMENDED TECHNICAL IMPLEMENTATION
+
+Choose a modern, maintainable technology stack compatible with Google AI Studio's available development environment.
+
+Suggested approach:
+
+- React with TypeScript for the frontend.
+- A responsive component system.
+- A central routing system for the seven main sections.
+- A central translation dictionary or i18n library.
+- A secure backend API for AI calls and product-data retrieval.
+- A database for farmer profiles, scan history, assessments, care kits, cart, and orders.
+- A vision-capable model for crop image validation and analysis.
+- An LLM for the multilingual agricultural chatbot.
+- A real product catalogue API or authorised seller feed for live marketplace data.
+- Secure image storage if uploaded images need to be retained.
+
+Use environment variables for secrets. Include a sample environment configuration containing placeholder variable names, never real credentials.
+
+If an integration is unavailable, implement a clearly labelled demonstration mode and explain how to connect the real service later.
+
+Do not make the entire application dependent on one API call. The crop library, navigation, assessment, and other offline-capable features should remain usable when an AI service is temporarily unavailable.
+
+---
+
+11. HOMEPAGE DESIGN AND VISUAL QUALITY
+
+Make the final website look like a polished agricultural technology product rather than a basic college assignment.
+
+Use:
+
+- A visually impressive agricultural hero section.
+- High-quality, relevant crop imagery.
+- Clean cards and structured information.
+- A consistent green-and-earth colour palette.
+- A simple, intuitive user journey.
+- Clear section separation.
+- Attractive empty states and result cards.
+- Subtle animations that do not slow the website.
+- Mobile-friendly buttons and forms.
+- Professional but friendly copywriting.
+
+The homepage should immediately communicate three main benefits:
+
+1. Detect crop problems.
+2. Find affordable care.
+3. Learn and manage crops easily.
+
+The farmer should be able to reach the disease detector, assessment, crop library, marketplace, chatbot, cart, and dashboard without confusion.
+
+---
+
+12. FINAL ACCEPTANCE CHECKLIST
+
+Before considering the project complete, verify each requirement:
+
+[ ] Website name is AgriCare.
+
+[ ] Home section includes the tagline, agricultural hero image, features, and clear calls to action.
+
+[ ] Disease detector accepts relevant crop images and rejects unrelated or unsuitable images.
+
+[ ] Disease analysis includes possible causes, symptoms, severity, confidence information, preventive measures, and suitable treatment guidance.
+
+[ ] The system does not invent diagnosis accuracy or guarantee a diagnosis.
+
+[ ] Crop assessment contains exactly 30 questions.
+
+[ ] Assessment responses generate a personalised, budget-conscious care plan.
+
+[ ] Budget-friendly, balanced, and preventive kit options are supported where appropriate.
+
+[ ] Marketplace includes fertilisers and relevant agricultural products with product-specific images.
+
+[ ] Real-time prices and availability are obtained from a configured source, or demo data is clearly labelled.
+
+[ ] View Cart works across the website.
+
+[ ] Cart supports quantity changes, item removal, totals, and checkout navigation.
+
+[ ] Checkout does not pretend to process real payments unless an actual payment provider is configured.
+
+[ ] Crop library includes tomato, rice, onion, and cotton.
+
+[ ] Crop library explains relevant diseases, symptoms, causes, prevention, and treatment approaches.
+
+[ ] AI chatbot is available and supports English, Marathi, and Hindi.
+
+[ ] Language switching updates the entire website, not just the navigation.
+
+[ ] Farmer dashboard includes total scans, pending care tasks, orders dispatched, saved custom kits, scan history, and profile information.
+
+[ ] Navigation, buttons, forms, and major workflows function correctly.
+
+[ ] Application data is persisted when a backend is configured.
+
+[ ] Demo functionality is clearly distinguished from real AI, live prices, payments, and stored records.
+
+[ ] The website is responsive, accessible, secure, and suitable for a student community engagement project.
+
+---
+
+13. HOW TO DELIVER THE PROJECT
+
+Build the complete application, not just a description or design proposal.
+
+Start by establishing the overall application structure and the seven main sections. Then implement the shared navigation, global multilingual system, reusable components, and the functional workflows.
+
+Ensure that the website can be run and previewed in the available environment.
+
+After implementation:
+
+1. Show the complete website preview.
+2. Explain how each of the seven sections works.
+3. List the AI APIs, database, marketplace data sources, and other credentials required for real integrations.
+4. Clearly identify which features are fully functional and which are in demonstration mode.
+5. Provide simple setup instructions.
+6. Test the most important user journeys, especially image upload and validation, the 30-question assessment, care-kit generation, language switching, cart operations, and dashboard history.
+
+Final goal: Deliver AgriCare, a beautiful, practical, multilingual, AI-assisted crop-health platform that helps Indian farmers understand crop problems and explore safe, effective, and affordable solutions.
+
+Prioritise usefulness to farmers, transparency, affordability, accessibility, and reliable agricultural information over unnecessary complexity.
